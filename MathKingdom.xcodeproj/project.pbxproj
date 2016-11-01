@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A7827411DAB67BB00BD9F32 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7827401DAB67BB00BD9F32 /* main.swift */; };
+		1A298E021DC896F600548740 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A298E011DC896F600548740 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +23,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1A78273D1DAB67BB00BD9F32 /* Substrate */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Substrate; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A7827401DAB67BB00BD9F32 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		1A298E011DC896F600548740 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = main.swift; path = Source/main.swift; sourceTree = "<group>"; };
+		1A78273D1DAB67BB00BD9F32 /* Commandline */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Commandline; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,10 +38,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A298E031DC896FA00548740 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				1A298E011DC896F600548740 /* main.swift */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
 		1A7827341DAB67BA00BD9F32 = {
 			isa = PBXGroup;
 			children = (
-				1A78273F1DAB67BB00BD9F32 /* Substrate */,
+				1A298E031DC896FA00548740 /* Source */,
 				1A78273E1DAB67BB00BD9F32 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,25 +57,17 @@
 		1A78273E1DAB67BB00BD9F32 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1A78273D1DAB67BB00BD9F32 /* Substrate */,
+				1A78273D1DAB67BB00BD9F32 /* Commandline */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		1A78273F1DAB67BB00BD9F32 /* Substrate */ = {
-			isa = PBXGroup;
-			children = (
-				1A7827401DAB67BB00BD9F32 /* main.swift */,
-			);
-			path = Substrate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1A78273C1DAB67BA00BD9F32 /* Substrate */ = {
+		1A78273C1DAB67BA00BD9F32 /* Commandline */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1A7827441DAB67BB00BD9F32 /* Build configuration list for PBXNativeTarget "Substrate" */;
+			buildConfigurationList = 1A7827441DAB67BB00BD9F32 /* Build configuration list for PBXNativeTarget "Commandline" */;
 			buildPhases = (
 				1A7827391DAB67BA00BD9F32 /* Sources */,
 				1A78273A1DAB67BA00BD9F32 /* Frameworks */,
@@ -77,9 +77,9 @@
 			);
 			dependencies = (
 			);
-			name = Substrate;
+			name = Commandline;
 			productName = Substrate;
-			productReference = 1A78273D1DAB67BB00BD9F32 /* Substrate */;
+			productReference = 1A78273D1DAB67BB00BD9F32 /* Commandline */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -89,16 +89,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = James;
 				TargetAttributes = {
 					1A78273C1DAB67BA00BD9F32 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 1A7827381DAB67BA00BD9F32 /* Build configuration list for PBXProject "Substrate" */;
+			buildConfigurationList = 1A7827381DAB67BA00BD9F32 /* Build configuration list for PBXProject "MathKingdom" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -110,7 +111,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1A78273C1DAB67BA00BD9F32 /* Substrate */,
+				1A78273C1DAB67BA00BD9F32 /* Commandline */,
 			);
 		};
 /* End PBXProject section */
@@ -120,7 +121,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A7827411DAB67BB00BD9F32 /* main.swift in Sources */,
+				1A298E021DC896F600548740 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +146,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -193,6 +195,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -212,13 +215,17 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
 		1A7827451DAB67BB00BD9F32 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -226,6 +233,8 @@
 		1A7827461DAB67BB00BD9F32 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -234,7 +243,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1A7827381DAB67BA00BD9F32 /* Build configuration list for PBXProject "Substrate" */ = {
+		1A7827381DAB67BA00BD9F32 /* Build configuration list for PBXProject "MathKingdom" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1A7827421DAB67BB00BD9F32 /* Debug */,
@@ -243,13 +252,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1A7827441DAB67BB00BD9F32 /* Build configuration list for PBXNativeTarget "Substrate" */ = {
+		1A7827441DAB67BB00BD9F32 /* Build configuration list for PBXNativeTarget "Commandline" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1A7827451DAB67BB00BD9F32 /* Debug */,
 				1A7827461DAB67BB00BD9F32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
