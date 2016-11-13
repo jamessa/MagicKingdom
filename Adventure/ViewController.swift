@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate{
-
+    
     @IBOutlet weak var A: UILabel!
     @IBOutlet weak var B: UILabel!
     @IBOutlet weak var answerField: UITextField!
@@ -37,11 +37,11 @@ class ViewController: UIViewController, UITextFieldDelegate{
     }
     
     func next(){
-        scoreValue = scoreValue + 100
+        scoreValue = scoreValue + minusScore(a: aValue, b: bValue)
         scoreLabel.text = String(scoreValue)
         
         repeat {
-            aValue = Int(arc4random()) % 20
+            aValue = Int(arc4random()) % 50
         } while aValue < 10
         
         repeat {
@@ -52,12 +52,25 @@ class ViewController: UIViewController, UITextFieldDelegate{
         B.text = String(bValue)
         answerField.text = ""
     }
-
+    
+    func minusScore(a: Int, b:Int) -> Int {
+        var a = a
+        var b = b
+        var score = 100 // basis point
+        while a > 0 && b > 0 {
+            if a%10 < b%10 {
+                score = score + 100
+            }
+            a = a / 10
+            b = b / 10
+        }
+        return score
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
     
     @IBAction func editingChanged(_ sender: Any) {
         print("Current answer\(answerField.text)")
