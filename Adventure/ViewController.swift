@@ -40,13 +40,8 @@ class ViewController: UIViewController, UITextFieldDelegate{
         scoreValue = scoreValue + minusScore(a: aValue, b: bValue)
         scoreLabel.text = String(scoreValue)
         
-        repeat {
-            aValue = Int(arc4random()) % 50
-        } while aValue < 10
-        
-        repeat {
-            bValue = Int(arc4random()) % aValue
-        } while bValue < 1
+        aValue = (Int(arc4random()) % max(10,scoreValue / 100)) + 1
+        bValue = (Int(arc4random()) % aValue) + 1
         
         A.text = String(aValue)
         B.text = String(bValue)
